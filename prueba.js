@@ -16,7 +16,7 @@ db.once('open', async function () {
 			autor: 'Oscar Martinez',
 			body: 'Node es una gran plataforma'
 		};
-		let newBLog = await blog.saveProduct(miPrimerBlog);
+		let newBLog = await blog.guardarBlog(miPrimerBlog);
 		ids.push(newBLog._id);
 	}
 	let buscarPorId = await blog.obternerBlogPorId(ids[1]);
@@ -46,5 +46,7 @@ db.once('open', async function () {
 		let buscarPorId = await blog.obternerBlogPorId(i);
 		await blog.eliminarBlogPorId(i);
 	}
+
+	
 	db.close();
 });

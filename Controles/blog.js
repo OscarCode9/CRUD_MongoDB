@@ -5,7 +5,7 @@ class BlogCRUD {
   obternerBlogPorId(id) {
     return Blog.findById(id);
   }
-  saveProduct(_blog) {
+  guardarBlog(_blog) {
     let blog = new Blog();
     blog.titulo = _blog.titulo;
     blog.autor = _blog.autor;
